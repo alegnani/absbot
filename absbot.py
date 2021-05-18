@@ -3,8 +3,8 @@ import os
 import datetime
 from datetime import date
 import sys
-import time
-import os
+import json
+from selenium import webdriver
 
 def sanitize_input(inputs):
     lenght = len(inputs)
@@ -30,15 +30,9 @@ def sanitize_input(inputs):
         exit()
 
     try:
-        file = open("token")
-    except:
-        print("No token file found! Creating one...")
-        os.popen("touch token")
-        exit()
-    try:
         file = open("request")
     except:
-    	print("Not request file found!Creating one...")
+    	print("Not request file found! Creating one...")
     	os.popen("touch request")
     	exit()
     return hour, minute, lesson_id
@@ -63,10 +57,18 @@ def referer_attribute(lesson_id):
     return base_attr + str(lesson_id) + end
 
 def auth_attribute():
+    token = ""
     try:
-        token = open("token").read().rsplit()[1]
+        browser = webdriver.Chrome("./chromedriver")
+        browser.get('https://schalter.asvz.ch/')
+        while(browser.current_url != "https://schalter.asvz.ch/tn/memberships"):
+            time.sleep(1)
+        key = browser.execute_script("return localStorage.key(0)")
+        raw_content = browser.execute_script(f"return localStorage.getItem('{key}')")
+        dict_content = json.loads(raw_content)
+        token = dict_content['access_token']
     except:
-    	print("Token file is empty!")
+    	print("Error while retrieving token! :(")
     	exit()
     base_attr = "  -H 'Authorization: Bearer "
     end = "' \\"
@@ -88,11 +90,12 @@ def parse_request(lesson_id, timestamp):
 hour, minute, lesson_id = sanitize_input(sys.argv)
 timestamp = timestamp_unix(hour, minute)
 request = parse_request(lesson_id, timestamp)
-
+print("Request created")
+print(f"Waiting until {hour}:{minute}...")
 # print("#" * 32)
 # print("Raw request: ")
 
-print(request)
+# print(request)
 # print("\n + "#" * 32)
 # print()
 
@@ -102,7 +105,14 @@ print(request)
 while time.time() <= timestamp:
     pass
 
-print("huhuhhhhhuhuhuhuh")
+print("Sending request")
 
 stream = os.popen(request)
-print(stream.read())
+output = stream.read().splitlines()
+try:
+    l = json.loads(output[-1])
+    place = l["data"]["placeNumber"]
+    print("Successful registration")
+    print(f"Place: {place}")
+except:
+    print("Something went wrong or someone was faster :(")
