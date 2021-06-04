@@ -1,0 +1,20 @@
+Invoke-WebRequest -Uri "https://schalter.asvz.ch/tn-api/api/Lessons/191870/enroll??t=1621336678078" `
+-Method "POST" `
+-Headers @{
+"sec-ch-ua"="`" Not A;Brand`";v=`"99`", `"Chromium`";v=`"90`", `"Google Chrome`";v=`"90`""
+  "Accept"="application/json, text/plain, */*"
+  "Authorization"="Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjhENzRDN0E3OTA2MTBFOTE2MjNGRkVGMjEzMEVDODBENDk0RDkyQzAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJqWFRIcDVCaERwRmlQXzd5RXc3SURVbE5rc0EifQ.eyJuYmYiOjE2MjEzMzQ0MTYsImV4cCI6MTYyMTM0MTYxNiwiaXNzIjoiaHR0cHM6Ly9hdXRoLmFzdnouY2giLCJhdWQiOlsiaHR0cHM6Ly9hdXRoLmFzdnouY2gvcmVzb3VyY2VzIiwidG4tYXBpIiwidG4tYXBpZXh0IiwidG4tYXV0aCIsInRuLWhhbmdmaXJlIl0sImlkIjoiYTA2MzBjYjEtNzRjNS00ZjE2LWE0NDYtMjkyMzc3ZmYzNjMwIiwibmFtZSI6IjUwOTEzOSIsInByZWZlcnJlZF91c2VybmFtZSI6IjUwOTEzOSIsImh0dHA6Ly9zY2hlbWFzLnNjaGFsdGVyLmFzdnouY2gvMjAxOC8wNy9jbGFpbXMvYXN2emlkIjoiNTA5MTM5IiwiaHR0cDovL3NjaGVtYXMuc2NoYWx0ZXIuYXN2ei5jaC8yMDE4LzA3L2NsYWltcy9pbWFkZHJlc3NpZCI6IjEzOTM0NyIsImdpdmVuX25hbWUiOiJBbGVzc2FuZHJvIiwiZmFtaWx5X25hbWUiOiJMZWduYW5pIiwiaHR0cDovL3NjaGFsdGVyLmFzdnouY2gvMjAxNC8wNC9pZGVudGl0eS9jbGFpbXMvcGVyc29uaWQiOiI1MDkxMzkiLCJodHRwOi8vc2NoZW1hcy5zY2hhbHRlci5hc3Z6LmNoLzIwMTgvMDcvaWRlbnRpdHkvY2xhaW1zL2xhc3Rsb2dpbmRhdGUiOiIyMDIxLTA1LTE4IDEyOjQwOjE1IiwiZW1haWwiOiJhbGVnbmFuaUBzdHVkZW50LmV0aHouY2giLCJodHRwOi8vc2NoZW1hcy5zY2hhbHRlci5hc3Z6LmNoLzIwMTgvMDcvaWRlbnRpdHkvY2xhaW1zL2V4dGVybmFsdW5pcXVlaWQiOiI0MDI4Mjk5QGV0aHouY2giLCJodHRwOi8vc2NoZW1hcy5zY2hhbHRlci5hc3Z6LmNoLzIwMTgvMDcvaWRlbnRpdHkvY2xhaW1zL2V4dGVybmFsYWZmaWxpYXRpb24iOiJzdHVkZW50O21lbWJlciIsImh0dHA6Ly9zY2hlbWFzLnNjaGFsdGVyLmFzdnouY2gvMjAxOC8wNy9pZGVudGl0eS9jbGFpbXMvZXh0ZXJuYWxvcmlnaW5hdXRoIjoiZXRoei5jaCIsIkFzcE5ldC5JZGVudGl0eS5TZWN1cml0eVN0YW1wIjoiRzJNV1ZGVU1YT0pUVURVRVpTVU0yRU1HVU40QjVSVk8iLCJzdWIiOiJhMDYzMGNiMS03NGM1LTRmMTYtYTQ0Ni0yOTIzNzdmZjM2MzAiLCJhdXRoX3RpbWUiOjE2MjEzMzQ0MTQsImlkcCI6IlN3aXRjaEFhaS1ldGh6LmNoIiwiY2xpZW50X2lkIjoiNTU3NzZiZmYtZWY3NS00YzlkLTliZGQtNDVlODgzZWMzOGUwIiwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSIsInRuLWFwaSIsInRuLWFwaWV4dCIsInRuLWF1dGgiLCJ0bi1oYW5nZmlyZSJdLCJhbXIiOlsiZXh0ZXJuYWwiXX0.HN8wqNxlfGTiZ5urPuSdHfkWZYwQIviQ3bZboSBaKWArTYiAhfZX-LibvDPHEczQY1V_KOTn2cF8LEUJo5b4aM0Ryf2aIpE1YOsw186frrv2a5SczUX6_xsEAHUFcyHNYzSTAfJOSbGVIkMz_f46LO2pxBJA6sNVFfGxMufFXza8cHfD5nVt5sd-K49Fyf7bsbPTcfIbOafXSrgFO4hpKT5Oglgclztouw5h-w3e8FyLVR8C7VZOIeBSHUxQgLVFh4YwXCejuw0P1elnAYlc5hnzH2cuD5OxMLJd01zMIk5MrwefEP80i9TbqpyxoLygWKwMQadbOa_CecKTdGv9OoilX4nGzYRNkVz_soVLIuYTIyzfeKwWCy3LNAGL40sAIfFzgMvEuaXsIv2f9GIVYvDdMLvggIb52jNh_2eb7Yz3O9Hu0rCiy-nXkVl7OGN34K1_uEpZi7orMJudJlfDlrIPj6vJXxFIdJ5KFFQxr0qpap5YnNnveXExlC2EhRvG0NvctjAvCzAZCzQtnr91gA6GSNsLGCdo7Qh7E5WeJW-SL59ho5E5aUai_cKDOF6blCawXa0pncrhIoT1mP4iriUtWfzGnyNC6w8X8yPtyFb__dzivNqHrl3jAknks5pUXpZipBlrGPfVkkC-qp0Na4eRAhO8GZ8X5dQVSZ3fSXs"
+  "sec-ch-ua-mobile"="?0"
+  "User-Agent"="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+  "Origin"="https://schalter.asvz.ch"
+  "Sec-Fetch-Site"="same-origin"
+  "Sec-Fetch-Mode"="cors"
+  "Sec-Fetch-Dest"="empty"
+  "Referer"="https://schalter.asvz.ch/tn/lessons/191870"
+  "Accept-Encoding"="gzip, deflate, br"
+  "Accept-Language"="it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7"
+  "Cookie"="_ga=GA1.2.567522781.1621335738; _gid=GA1.2.436498759.1621335738; _hjTLDTest=1; _hjid=78bea848-ae67-4aa0-b2ac-e53b35398d02; _hjFirstSeen=1; _hjAbsoluteSessionInProgress=1"
+} `
+-ContentType "application/json" `
+-Body "{}" `
+-UseBasicParsing | Out-File -Encoding ascii res

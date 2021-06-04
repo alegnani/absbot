@@ -1,0 +1,11 @@
+c:\Users\legna\Desktop\rust\absbot\target\debug\deps\thiserror_impl-97f1e1e5eb9b634d.dll: C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\lib.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\ast.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\attr.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\expand.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\fmt.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\prop.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\valid.rs
+
+c:\Users\legna\Desktop\rust\absbot\target\debug\deps\thiserror_impl-97f1e1e5eb9b634d.d: C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\lib.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\ast.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\attr.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\expand.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\fmt.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\prop.rs C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\valid.rs
+
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\lib.rs:
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\ast.rs:
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\attr.rs:
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\expand.rs:
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\fmt.rs:
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\prop.rs:
+C:\Users\legna\.cargo\registry\src\github.com-1ecc6299db9ec823\thiserror-impl-1.0.25\src\valid.rs:
