@@ -1,1 +1,1 @@
-C:\Users\legna\Desktop\rust\absbot\target\debug\absbot.exe: C:\Users\legna\Desktop\rust\absbot\src\main.rs
+C:\Users\legna\Desktop\absbot\absbot-rusty\target\debug\absbot.exe: C:\Users\legna\Desktop\absbot\absbot-rusty\src\main.rs
