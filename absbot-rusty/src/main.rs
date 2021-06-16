@@ -34,32 +34,7 @@ fn run() -> anyhow::Result<()> {
 
     println!("Got authentication token");
 
-    let now = Local::now();
-    let target_time = NaiveTime::from_hms(hour, minute, 0);
-    let target_date = now.date().naive_local();
-    let target = chrono::Local
-        .from_local_datetime(&NaiveDateTime::new(target_date, target_time))
-        .single()
-        .map(|time| time.timestamp_millis() as u64 + 1)
-        .context("Error converting date time")?;
-
-    println!("Computed target time: {}", target);
-
-    let mut dt = 0;
-    if now.timestamp_millis() as u64 <= target {
-        dt = target - now.timestamp_millis() as u64;
-    }
-
-    if dt > 3000 {
-        println!("Going to sleep for {} seconds", dt / 1000 - 3);
-        thread::sleep(Duration::from_millis(dt - 3000));
-    }
-
-    println!("Waking up...");
-
-    println!("Busy waiting to send request...");
-
-    while (Local::now().timestamp_millis() as u64) < target {}
+    let target = wait_for_target(hour, minute)?;
 
     let outcome = make_request(auth_token, lesson_id, target);
 
@@ -114,6 +89,37 @@ fn get_auth_token() -> anyhow::Result<String> {
         .context("No field 'access_token' in the JSON")?;
 
     Ok(auth_token.into())
+}
+
+fn wait_for_target(hour: u32, minute: u32) -> anyhow::Result<u64> {
+    let now = Local::now();
+    let target_time = NaiveTime::from_hms(hour, minute, 0);
+    let target_date = now.date().naive_local();
+    let target = chrono::Local
+        .from_local_datetime(&NaiveDateTime::new(target_date, target_time))
+        .single()
+        .map(|time| time.timestamp_millis() as u64 + 1)
+        .context("Error converting date time")?;
+
+    println!("Computed target time: {}", target);
+
+    let mut dt = 0;
+    if now.timestamp_millis() as u64 <= target {
+        dt = target - now.timestamp_millis() as u64;
+    }
+
+    if dt > 3000 {
+        println!("Going to sleep for {} seconds", dt / 1000 - 3);
+        thread::sleep(Duration::from_millis(dt - 3000));
+    }
+
+    println!("Waking up...");
+
+    println!("Busy waiting to send request...");
+
+    while (Local::now().timestamp_millis() as u64) < target {}
+    
+    Ok(target)
 }
 
 fn make_request(auth_token: String, lesson_id: u32, target: u64) -> anyhow::Result<StatusCode> {
