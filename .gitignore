@@ -1,2 +1,8 @@
 /absbot-rusty/target
 /absbot-rusty/.vscode
+
+debug/
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
